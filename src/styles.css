@@ -1,0 +1,417 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f8f3ed;
+  color: #49382f;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/* LOGIN AND REGISTER */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #eee0d1, #faf5ef, #e7d2bf);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  background: #fffdf9;
+  padding: 42px;
+  border-radius: 22px;
+  box-shadow: 0 15px 50px #745b4320;
+}
+
+.auth-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 9px;
+  color: #624333;
+}
+
+.auth-card > p {
+  color: #9b897b;
+  margin-bottom: 28px;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-card label,
+.note-modal label {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 15px 0 8px;
+  color: #765b49;
+}
+
+.auth-card input,
+.note-modal input,
+.note-modal textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #eadfd3;
+  border-radius: 10px;
+  background: #fcf8f3;
+  outline: none;
+}
+
+.auth-card input:focus,
+.note-modal input:focus,
+.note-modal textarea:focus {
+  border-color: #a47a5c;
+}
+
+.auth-card form button,
+.save-button {
+  background: #79543e;
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  margin-top: 25px;
+  font-weight: 700;
+}
+
+.auth-card form button:hover,
+.save-button:hover {
+  background: #60402f;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.auth-switch a {
+  color: #8b5d3f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.error-message {
+  background: #fce8e6;
+  color: #b23b32;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 255px;
+  background: #f0e5d9;
+  padding: 35px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  color: #654630;
+  margin-bottom: 55px;
+}
+
+.brand span {
+  color: #b18a6d;
+}
+
+.menu-heading {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #a28b79;
+  margin-bottom: 18px;
+}
+
+.menu-item,
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px;
+  border-radius: 10px;
+  background: transparent;
+  color: #806b5b;
+  text-align: left;
+  margin-bottom: 9px;
+}
+
+.menu-item span {
+  margin-left: auto;
+}
+
+.menu-item.active {
+  background: #79543e;
+  color: white;
+}
+
+.logout-button {
+  margin-top: auto;
+  color: #9a584a;
+}
+
+.main-content {
+  flex: 1;
+  padding: 45px;
+  min-width: 0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.welcome-text {
+  color: #a48770;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.dashboard-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  color: #634632;
+}
+
+.subtitle {
+  color: #a18d7d;
+  margin-top: 8px;
+}
+
+.add-button {
+  background: #79543e;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+}
+
+.add-button:hover {
+  background: #60402f;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fffdf9;
+  border: 1px solid #eee2d6;
+  border-radius: 12px;
+  padding: 15px 18px;
+  color: #a18a77;
+  margin-bottom: 35px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #49382f;
+}
+
+.notes-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  color: #694c38;
+}
+
+.notes-heading span {
+  color: #a18d7d;
+  font-size: 13px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+  gap: 22px;
+}
+
+.note-card {
+  background: #fffdf9;
+  padding: 24px;
+  border: 1px solid #eee3d8;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px #79543e0b;
+  transition: 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px #79543e16;
+}
+
+.note-category {
+  color: #b08b6e;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.note-card h3 {
+  margin: 18px 0 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  color: #654630;
+  overflow-wrap: anywhere;
+}
+
+.note-description {
+  color: #978475;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  min-height: 65px;
+}
+
+.note-actions {
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid #f0e7df;
+  padding-top: 16px;
+  margin-top: 20px;
+}
+
+.note-actions button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: #896a53;
+  font-size: 13px;
+}
+
+.note-actions .delete-action {
+  color: #b66c5c;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 70px 20px;
+  color: #a18d7d;
+  background: #fffdf9;
+  border-radius: 15px;
+}
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: #38271f80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.note-modal {
+  background: #fffdf9;
+  padding: 30px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-family: 'Playfair Display', serif;
+  color: #654630;
+}
+
+.modal-header button {
+  background: transparent;
+  color: #79543e;
+}
+
+.note-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-modal textarea {
+  resize: vertical;
+}
+
+@media (max-width: 750px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .brand {
+    margin-bottom: 20px;
+  }
+
+  .logout-button {
+    margin-top: 10px;
+  }
+
+  .main-content {
+    padding: 22px;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-header h1 {
+    font-size: 30px;
+  }
+}
